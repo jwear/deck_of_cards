@@ -1,3 +1,4 @@
+require_relative '../lib/card'
 require_relative '../lib/deck'
 
 describe Deck do
@@ -10,8 +11,9 @@ describe Deck do
 
   it "draws a card" do
     deck = Deck.new
+    card = deck.draw
 
-    expect(deck.draw).to eq(51)
+    expect(deck.cards.size).to eq(51)
+    expect(card).to be_an_instance_of(Card)
   end
-
 end
