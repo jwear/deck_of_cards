@@ -19,4 +19,9 @@ class Deck
   def draw
     @cards.pop
   end
+
+  def empty?
+    @cards.empty?
+  end
+  
 end
