@@ -27,4 +27,13 @@ describe Deck do
 
     expect(deck).to be_empty
   end
+
+  it "shuffles the deck" do
+    deck = Deck.new
+
+    original_cards = deck.cards.dup
+    deck.shuffle!
+
+    expect(original_cards).not_to eq(deck.cards)
+  end
 end

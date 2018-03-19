@@ -13,7 +13,7 @@ class Deck
         @cards << card
       end
     end
-    @cards
+    shuffle!
   end
 
   def draw
@@ -23,5 +23,8 @@ class Deck
   def empty?
     @cards.empty?
   end
-  
+
+  def shuffle!
+    @cards.shuffle!
+  end
 end
